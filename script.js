@@ -13,18 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
     tilesContainer.style.width = "800px";
     tilesContainer.style.height = "800px";
     tilesContainer.style.margin = "auto";
+    tilesContainer.style.border = "8px black solid"
+    tilesContainer.style.backgroundColor = "red"
+    //tilesContainer.style.boxShadow = "inset 10px 10px 10px black"
     //tilesContainer.style.background = "linear-gradient(45deg, red, black)";"
-    tilesContainer.style.zIndex = "0";
     for (let i = 0; i < boardSize; i++) {
       for (let j = 0; j < boardSize; j++) {
         const tile = document.createElement("div");
-  
         //background color based on the row and column (red and black) 
         if ((i + j) % 2 === 0) {
           tile.style.backgroundColor = "red";
         } else {
           tile.style.backgroundColor = "black";
         }
+        //Gradient checkerboard
+        // var op = (i+j)*.05;
+        // tile.style.opacity = op;
          
         //Multi-colored Background
         // const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
@@ -34,11 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // function colorSwap(){
         //     const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
         //     tile.style.backgroundColor = randomColor;
-        // }
-
-        //Gradient Checkerboard
-        
-
+        // }    
         // setInterval(colorSwap, 2000)
         // Set the tile size
         tile.style.width = "12.5%";
