@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var audio = document.createElement('audio');
     var source = document.createElement('source');
     audio.setAttribute("autoplay", true);
-    source.setAttribute("src", "/audio/glue70HighwayBroken.mp3");
+    source.setAttribute("src", "audio/glue70HighwayBroken.mp3");
     source.setAttribute("type", "audio/mp3");
     console.log(source)
     body.appendChild(audio)
