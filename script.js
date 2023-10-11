@@ -13,19 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
     tilesContainer.style.width = "800px";
     tilesContainer.style.height = "800px";
     tilesContainer.style.margin = "auto";
-    tilesContainer.style.border = "8px black solid"
-    tilesContainer.style.backgroundColor = "red"
+    tilesContainer.style.border = "8px black solid";
+    tilesContainer.style.backgroundColor = "red";
     //tilesContainer.style.boxShadow = "inset 10px 10px 10px black"
     //tilesContainer.style.background = "linear-gradient(45deg, red, black)";"
     for (let i = 0; i < boardSize; i++) {
       for (let j = 0; j < boardSize; j++) {
         const tile = document.createElement("div");
         //background color based on the row and column (red and black) 
-        if ((i + j) % 2 === 0) {
-          tile.style.backgroundColor = "red";
-        } else {
-          tile.style.backgroundColor = "black";
-        }
+        // if ((i + j) % 2 === 0) {
+        //   tile.style.backgroundColor = "red";
+        // } else {
+        //   tile.style.backgroundColor = "black";
+        // }
         //Gradient checkerboard
         // var op = (i+j)*.05;
         // tile.style.opacity = op;
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tile.style.backgroundColor = randomColor;
         }    
         setInterval(colorSwap, 2000)
-        // Set the tile size
+        //Set the tile size
         tile.style.width = "12.5%";
         tile.style.height = "12.5%";
          
@@ -52,4 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Add the container to the body
     body.appendChild(tilesContainer);
+    
+    var audio = document.createElement('audio');
+    var source = document.createElement('source');
+    audio.setAttribute("autoplay", true);
+    source.setAttribute("src", "/audio/glue70HighwayBroken.mp3");
+    source.setAttribute("type", "audio/mp3");
+    console.log(source)
+    body.appendChild(audio)
+    audio.appendChild(source)
+    audio.autoplay = true;
   });
