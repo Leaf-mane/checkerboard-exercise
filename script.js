@@ -31,15 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // tile.style.opacity = op;
          
         //Multi-colored Background
-        // const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
-        //     tile.style.backgroundColor = randomColor;
+        const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
+            tile.style.backgroundColor = randomColor;
 
         //Random color swap
-        // function colorSwap(){
-        //     const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
-        //     tile.style.backgroundColor = randomColor;
-        // }    
-        // setInterval(colorSwap, 2000)
+        function colorSwap(){
+            const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
+            tile.style.backgroundColor = randomColor;
+        }    
+        setInterval(colorSwap, 2000)
         // Set the tile size
         tile.style.width = "12.5%";
         tile.style.height = "12.5%";
