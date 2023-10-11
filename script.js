@@ -22,24 +22,24 @@ document.addEventListener("DOMContentLoaded", function () {
         const tile = document.createElement("div");
         //background color based on the row and column (red and black) 
         if ((i + j) % 2 === 0) {
-          tile.style.backgroundColor = "red";
+          tile.style.backgroundColor = "magenta";
         } else {
-          tile.style.backgroundColor = "black";
+          tile.style.backgroundColor = "blue";
         }
         //Gradient checkerboard
-        // var op = (i+j)*.05;
-        // tile.style.opacity = op;
+        var op = (i+j)*.05;
+        tile.style.opacity = op;
          
         //Multi-colored Background
-        const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
-            tile.style.backgroundColor = randomColor;
+        // const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
+        //     tile.style.backgroundColor = randomColor;
 
         //Random color swap
-        function colorSwap(){
-            const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
-            tile.style.backgroundColor = randomColor;
-        }    
-        setInterval(colorSwap, 2000)
+        // function colorSwap(){
+        //     const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}`;
+        //     tile.style.backgroundColor = randomColor;
+        // }    
+        // setInterval(colorSwap, 2000)
         // Set the tile size
         tile.style.width = "12.5%";
         tile.style.height = "12.5%";
